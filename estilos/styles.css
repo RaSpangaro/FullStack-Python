@@ -18,21 +18,34 @@ body{
             HEADER
 -------------------------------*/
 
-header{
+/*header{
     align-items: center;
     background-color: white;
-    display: flex;
-    height: 20vh;
-    justify-content: flex-end;
+    display: grid;
+    grid-template-columns: auto;
+    height: 15vh;
     padding: 5px;
     width: 100vw;
+}*/
+
+.copy_header{
+    align-items: center;
+    background-color: white; /*rgb(235, 225, 225)*/
+    display: grid;
+    grid-template-columns: auto auto;
+    height: 20vh;
+    padding: 5px;
+    width: 100vw;
+    position: sticky;
+    top: 0px;
+    z-index: 40;
 }
 
 /*--barra de navegacion MENU --*/
 
 .barra_menu{
     align-items: center;
-    display: flex;
+    display: grid;
     height: 50%;
     justify-content: flex-end;
     width: 100%;
@@ -40,10 +53,11 @@ header{
 
 .barra_menu ul{
     display: flex;
+    z-index: 60;
 }
 
 .barra_menu ul li{
-    list-style-type: none;
+    list-style-type:none;
     font-size: 1.2em;
     padding-right: 10px;
 }
@@ -51,11 +65,12 @@ header{
 .barra_menu ul li a{
     color:  #212022;
     padding: 7px 10px;
-    text-decoration: none;
+    text-decoration:none;
 }
 
-a :hover{
-    color: #434445;
+.barra_menu ul li a:hover{
+    color:  #172535;
+    background-color: rgb(130, 148, 156);
 }
 
 .checkbtn{
@@ -75,35 +90,22 @@ section{
     height: calc(100vh - 80px);
 }
 
-
 /*-------------------------------
             MAIN
 -------------------------------*/
 
 .imgppal{
-    height: 80vh;
+    height: 90vh;
     margin: 0px;
-    max-width: 1800px;
+    max-width: 100%;
     width: 100%;
 }
 
 .imgppal img{
+    flex-grow: 1;
     text-align: center;
     height: auto;
-    width: 100%;
-}
-
-/*--section NOSOTROS --*/
-
-.nosotros{
-    align-items: center;
-    color:  #212022;
-    display: flex;
-    flex-direction: column;
-    height: 50vh;
-    justify-content: center;
-    margin-top: 10px;
-    padding: 30px;   
+    width: 100vw;
 }
 
 #titulo{
@@ -112,38 +114,47 @@ section{
     top: 20px;
 }
 
-.detalle-nosotros{
-    padding-top: 30px;
+#titulo2{
+    font-size: 2em;
     text-align: center;
+    top: 20px;
 }
+
+#titulo2 a:link {color: #212022;}
+#titulo2 a:hover {background-color: #73919e;}
+#titulo2 a:visited {color: #212022;}
+#titulo2 a:active {color: #212022;}
 
 /*-- section ESTUDIOS--*/
 
 .estudios{
     align-items: center;
-    display: flex;
+    display: grid;
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 10px;
+    padding: 30px; 
+    height: 650px;
+    width: 100vw;
 }
 
-
-.contenedor {
+.contenedor_estudios{
+    display: flex;
     position: relative;
     height: 500px;
     width: 90%;
-    top: 60px;
-    display: flex;
+    top: 5px;
+    left: 50px;
 }
 
 .card {
     display: flex;
     height: 480px;
-    width: 500px;
+    width: 60%;
     background-color: #212022;
     border-radius: 10px;
     box-shadow: -1rem 0 3rem #000;
     transition: 0.4s ease-out;
-    position: relative;
+    position:relative;
     left: 0px;
 }
 
@@ -201,10 +212,14 @@ section{
 }
 
 .circle {
-    left: 25px;
+    left: 15px;
     position: absolute;
-    text-align: center;
     top: 150px;
+}
+
+.circle img{
+    width:400px;
+    height:250px;
 }
 
 .stroke {
@@ -219,75 +234,354 @@ section{
     transition: 0.6s ease-out;
 }
 
-
 /*-- section SERVICIOS--*/
 
+.contenedor_servicios{
+    justify-content: space-around;
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 30px;
+    height: 60vh;
+    width: 90%;
+    gap: 5px;
+    padding: 10px;
+}
+
 .servicios{
+    display: grid;
+    margin-top: 10vh; /*100px*/
+    padding: 30px; 
+    grid-template-columns: auto auto;
     align-items: center;
-    display: flex;
     flex-direction: column;
-    height: max-content;
+    width: 100vw;
+    height: 75vh;
     justify-content: flex-start;
 }
 
-.contenedor_servicios{
-    display: flex;
-    justify-content: space-around;
-    margin: 30px;
-    height: 50vh;
-    width: 80%;
-    }
-
-#servicios_col{
+.servicios_col{
     align-items: center;
-    display: flex;
+    display: grid;
     flex-direction: column;
     justify-content: space-around;
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
-#detalle :hover {
-  width: 300px;
-  height: 300px;
-}
-    
-
-#detalle{
+.detalle{
+    width: 300px;
+    height: 300px;
     background-color: white;
     border-radius: 10px;
     box-shadow: -2rem 0 3rem #000;
     color: #212022;
-    height: 30%;
-    padding: 25px;
-    width: 90%;
+    height: 95%;
+    gap:10px;
+    padding: 20px;
+    width: 100%;
 }
 
-#detalle i{
-    padding-right: 20px;
+.detalle:hover{
+    transition-property: all;
+    transition: width 2s, height 2s, transform 2s;
+    background-color: rgb(44, 40, 44);
+    box-shadow: -2rem 0 3rem rgb(155, 151, 151);
+    color: #e6dbf0;
+    height: 100%;
+    padding: 10px;
+    font-size: 1.3vw;
 }
+
+/*--section GRABACIONES --*/
+
+.grabaciones{
+    align-items: center;
+    color:  #212022;
+    display: grid;
+    flex-direction: column;
+    height: 50vh;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 30px;   
+}
+
+/*--section ARTISTAS --*/
+
+.contenedor_artistas{
+    justify-content: space-around;
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto;
+    font-size: 1.3em;
+    margin: 30px;
+    height: 50vh;
+    width: 100%;
+    gap: 10px;
+    padding: 10px;
+}
+
+.artistas{
+    align-items: center;
+    color:  #212022;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 45vh;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 30px;   
+}
+
+/*--section CONTÁCTANOS --*/
+
+.contactanos{
+    align-items: center;
+    color:  #212022;
+    display: grid;
+    width: 100vw;
+    height: 80vh;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 30px;   
+}
+
+.detalle_contact{
+    align-items: center;
+    color:  #212022;
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+    height: 65vh;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 10px;   
+}
+
+/*--section FOOTER --*/
+
+footer{
+    display: grid;
+    text-align: center;
+    background-color: #212022;
+    grid-template-columns: auto;
+    height: 20vh;
+    padding: 15px;
+    width: 100vw;
+}
+
+.foo{
+    margin-left: -15px;
+    text-align: center;
+    font-size: 1.3em;
+    background-color: #212022;
+    color:rgb(228, 95, 95);
+    height: 2vh;
+    padding: 15px;
+    width: 100vw;
+}
+
+.foo::before{
+    content: "All rights reserved to  ";
+    color:rgb(155, 151, 151)
+}
+
+.foo::after{
+    content: "  © 2022";
+    color:rgb(155, 151, 151)
+}
+
+.logos{
+    display: grid;
+    text-align-last: center;
+    align-content: center;
+    font-size: 1.5em;
+    padding-right: 5px;
+    color:  rgb(155, 151, 151);
+}
+.logos a:link {color: rgb(155, 151, 151);}
+.logos a:hover {background-color: #525758;}
+.logos a:visited {color: rgb(155, 151, 151);}
+.logos a:active {background-color: whitesmoke; color: rgb(155, 151, 151);}
+
+/*-------------------------------
+            ESTUDIOS
+-------------------------------*/
+
+/*--section NOSOTROS --*/
+
+.nosotros{
+    align-items: center;
+    color:  #212022;
+    display: grid;
+    flex-direction: column;
+    height: 40vh;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 30px;   
+}
+.detalle-nosotros{
+    padding-top: 30px;
+    text-align: center;
+    font-size: 1.4em;
+}
+
+/*--section ESTUDIOS --*/
+
+.nos_estudios{
+    align-items: center;
+    margin-top: 10px;
+    padding: 40px; 
+    height: 235vW;
+    width: 100%;
+}
+.detalle_nos_estudios{
+    padding-top: 10px;
+    text-align: left;
+    text-align: justify;
+    font-size: 1.3em;
+}
+.detalle_estudio{
+    display: grid;
+    height: 82vw; /*1100px*/
+    width: 100%;
+    padding: 10px;  
+}
+.imgest{
+    height: 100vh;
+    margin: 3px;
+    max-width: 100%;
+    width: 100%;
+}
+.imgest img{
+    text-align: center;
+    height: auto;
+    width: 100%;
+}
+
+
+/*--section QUIENES SOMOS --*/
+
+.quienes_somos{
+    align-items: center;
+    color:  #212022;
+    display: grid;
+    flex-direction: column;
+    height: 50vh;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 30px;   
+}
+
 
 /*DISENO RESPONSIVO*/
 
 @media (max-width: 750px){
-    .checkbtn{
-        display: flex;
-        align-items: flex-end;
+    .imgppal{
+        height: 50vh;
     }
 
-    ul{
+    .checkbtn{
+        display: grid;
+    }
+
+    .barra_menu ul{
         position: fixed;
+        display: grid;
         width: 100vw;
-        height: 100vh;
+        height: 50vh;
         top: 80px;
-        left: -100%;
+        right: 100%;
         text-align: end;
         transition: all .5s;
+        padding-right: 500px;
     }
     .barra_menu ul li{
-        display: block;
-        margin: 50px 0;
+        display:grid;
+        margin: -2px 0;
     }
+    .barra_menu ul li a{
+        color:  #edeaf1;
+        background-color: rgb(49, 56, 59);
+    }
+
+    .barra_menu ul li a:hover{
+        color:  #a7adbd;
+        background-color: rgb(12, 34, 44);
+    }
+
     #check:checked ~ ul{
         left:0;
+    }
+
+    /*-- section SERVICIOS--*/
+    .servicios{
+        margin-top: -1vw; /*10px*/
+        height: 120vh;
+    }
+    
+    .contenedor_servicios{
+        grid-template-columns: auto;
+        height: 100vh;
+    }
+
+    .detalle:hover{
+        font-size: 2.6vw;
+    }
+
+    /*-- section ESTUDIOS--*/
+    .estudios{
+        display: flex;
+    }
+    .contenedor_estudios{
+        left: 20px;
+        top: 50px;
+    }
+    .circle{
+        left: 15px;
+        position: absolute;
+        top: 200px;
+    }
+    .circle img{
+        width:180px;
+        height:200px;
+    }
+
+    /*-- section NOSOTROS--*/
+    .detalle-nosotros{
+        font-size: 1.2em;
+    }
+
+    .nos_estudios{
+        align-items: center;
+        flex-direction: column;
+        margin-top: 10px;
+        padding: 40px; 
+        height: 300vW;
+        width: 100%;
+    }
+    .detalle_nos_estudios{
+        padding-top: 10px;
+        text-align: left;
+        text-align: justify;
+        font-size: 1em;
+    }
+    .detalle_estudio{
+        display: grid;
+        height: 650px;
+        width: 100%;
+        margin-top: 10px;
+        padding: 10px;  
+    }
+    .imgest{
+        height: 50vh;
+        margin: 3px;
+        max-width: 100%;
+        width: 100%;
+    }
+    .imgest img{
+        text-align: center;
+        height: auto;
+        width: 100%;
     }
 }
 
