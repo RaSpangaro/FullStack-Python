@@ -58,19 +58,19 @@ body{
 
 .barra_menu ul li{
     list-style-type:none;
-    font-size: 1.2em;
+    font-size: 1.4em;
     padding-right: 10px;
 }
 
 .barra_menu ul li a{
-    color:  #212022;
+    color:  #6b5b49;
     padding: 7px 10px;
     text-decoration:none;
 }
 
 .barra_menu ul li a:hover{
-    color:  #172535;
-    background-color: rgb(130, 148, 156);
+    color:  whitesmoke;
+    background-color: rgb(122, 109, 95);
 }
 
 .checkbtn{
@@ -284,7 +284,7 @@ section{
 .detalle:hover{
     transition-property: all;
     transition: width 2s, height 2s, transform 2s;
-    background-color: rgb(44, 40, 44);
+    background-color: rgb(122, 109, 95);
     box-shadow: -2rem 0 3rem rgb(155, 151, 151);
     color: #e6dbf0;
     height: 100%;
@@ -299,7 +299,8 @@ section{
     color:  #212022;
     display: grid;
     flex-direction: column;
-    height: 50vh;
+    height: 170vh;
+    width: 100%;
     justify-content: center;
     margin-top: 10px;
     padding: 30px;   
@@ -501,12 +502,12 @@ footer{
     }
     .barra_menu ul li a{
         color:  #edeaf1;
-        background-color: rgb(49, 56, 59);
+        background-color: rgb(122, 109, 95);
     }
 
     .barra_menu ul li a:hover{
-        color:  #a7adbd;
-        background-color: rgb(12, 34, 44);
+        color:  #dde0e7;
+        background-color: rgb(131, 125, 120);
     }
 
     #check:checked ~ ul{
@@ -546,6 +547,15 @@ footer{
         height:200px;
     }
 
+    /*-- section CONTACTANOS--*/
+    .contactanos{
+        height: 110vh; 
+    }
+    .detalle_contact{
+        grid-template-columns: auto;
+        height: 100vh;
+    }
+
     /*-- section NOSOTROS--*/
     .detalle-nosotros{
         font-size: 1.2em;
@@ -582,6 +592,11 @@ footer{
         text-align: center;
         height: auto;
         width: 100%;
+    }
+
+    /*-- section GRABACIONES--*/
+    .grabaciones{
+        height: 90vh;  
     }
 }
 
