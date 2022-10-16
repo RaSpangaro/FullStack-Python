@@ -75,7 +75,7 @@
                     </div>
                     <div class="detalle">
                         <h4><i class="fa-solid fa-headphones-simple"></i>  Música Original</h4>
-                        <span>Realizamos composciones originales para publicidades, cortometrajes, largometrajes y todo tipo de producciones audiovisuales.</span>
+                        <span>Realizamos composiciones originales para publicidades, cortometrajes, largometrajes y todo tipo de producciones audiovisuales.</span>
                     </div>
                     <div class="detalle">
                         <h4><i class="fa-regular fa-circle-play"></i>  Post-Producción</h4>
@@ -142,29 +142,59 @@
                 </div>
             </section>
 
-            <section id="contactanos" class="contactanos">
+            <section id="contacto">
                 <h2 id="titulo">[ CONTACTANOS ]</h2>
-                <div class="detalle_contact">
-                    <div>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d13139.291670973522!2d-58.43187016751091!3d-34.58334702122802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1splaza%20italia!5e0!3m2!1sen!2sar!4v1665594996603!5m2!1sen!2sar" width="500" height="350" style="border:1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="contenedor_contacto">
+                    <div class="mapa">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26269.018944831958!2d-58.38814724742201!3d-34.61358307783589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334d9c2d70389%3A0xe7b5e9ee316678f!2sPuerto%20Madero%2C%20CABA%2C%20Argentina!5e0!3m2!1ses!2ses!4v1665911174809!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-                    <div>
-                        <form action="">
-                            <label for="nombre">Nombre</label>
-                            <input name="nombre" type="text" placeholder="Ingresa tu nombre"/>
-                            <label for="email">Email</label>
-                            <input type="email" name="email" id="email"
-                            placeholder="Ingresa tu email"/>
-                            <label for="Opinion">Opinion</label>
-                            <textarea name="" id="" cols="10" rows="10"></textarea>
+
+                    <div class="formulario">      
+                        <h3>Formulario de contacto</h3>
+                        <h4>Escríbenos y en breve nos pondremos en contacto contigo</h4>
+    
+                        <form>
+                            <p><label for="nombre" class="colocar_nombre">Nombre
+                                <span class="obligatorio">*</span></label>
+                                <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+                            </p>
+                                
+                            <p><label for="email" class="colocar_email">Email
+                                    <span class="obligatorio">*</span>
+                                </label>
+                                <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+                            </p>
+                                
+                            <p><label for="telefono" class="colocar_telefono">Teléfono</label>
+                                <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
+                            </p>    
+                                
+                            <p><label for="asunto" class="colocar_asunto">Asunto
+                                    <span class="obligatorio">*</span>
+                                </label>
+                                <input type="text" name="introducir_asunto" id="assunto" required="obligatorio" placeholder="Escribe un asunto">
+                            </p>    
+                                
+                            <p><label for="mensaje" class="colocar_mensaje">Mensaje
+                                    <span class="obligatorio">*</span>
+                                </label>                     
+                                <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
+                            </p>                    
+                            
                         </form>
-                    </div>
-                </div> 
+
+                        <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
+                    
+                        <p class="aviso">
+                            <span class="obligatorio"> * </span>los campos son obligatorios.
+                        </p>          
+                    </div>  
+                </div>
             </section>
         </main>  
         <footer>
             <div>
-                <p class="foo">  santaRita  </p>
+                <p class="foo">santaRita</p>
             </div>
             <div class="logos">
                 <span>
