@@ -10,7 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/96a6b841a3.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/b7d188082b.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="/estilos/Logos/Logo.ico">
+    <link rel="icon" href="/estilos/imagenes/sR.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    
     <title>TPCodoACodo</title>
 </head>
 <body>
@@ -35,9 +38,9 @@
     </div>
 
     <section class="grabaciones">
-        <div class="discos1">
+        <!--<div> class="discos1"-->
             <h2 id="titulo">[ GRABACIONES ]</h2>
-            <span></span>
+            <!--<span></span>
             <div>
                 <img src="" alt="">
                 <span></span>
@@ -89,6 +92,34 @@
             <div>
                 <img src="" alt="">
                 <span></span>
+            </div>
+    </section>-->
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/estilos/imagenes/estudio6.jpeg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/estilos/imagenes/estudio11.jpeg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./estilos/imagenes/estudio7.jpeg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
     </section>
 
