@@ -9,6 +9,6 @@ function ListArtists(lista){
     return text
     }
     
-    let listado = ["artista1", "artista2", "artista3", "artista4", "artista5","artista6","artista7"];
+    let listado = ["Miguel García", "Mariano Villasante", "Nicolás Lapine", "Rey Gurú", "Attomo","Leandro Guido","Peyo Campoliete","Zequi Lassalle"];
     document.write(ListArtists(listado))
     
