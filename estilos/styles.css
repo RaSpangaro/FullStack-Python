@@ -391,32 +391,13 @@ footer{
 /*-------------------------------
             ESTUDIOS
 -------------------------------*/
-
-/*--section NOSOTROS --*/
-
-.nosotros{
-    align-items: center;
-    color:  #212022;
-    display: grid;
-    flex-direction: column;
-    height: 40vh;
-    justify-content: center;
-    margin-top: 10px;
-    padding: 30px;   
-}
-.detalle-nosotros{
-    padding-top: 30px;
-    text-align: center;
-    font-size: 1.4em;
-}
-
 /*--section ESTUDIOS --*/
 
 .nos_estudios{
     align-items: center;
     margin-top: 10px;
     padding: 40px; 
-    height: 235vW;
+    height: 245vW;
     width: 100%;
 }
 .detalle_nos_estudios{
@@ -442,6 +423,41 @@ footer{
     height: auto;
     width: 100%;
 }
+
+/*-------------------------------
+            NOSOTROS
+-------------------------------*/
+/*--section NOSOTROS --*/
+
+.nosotros{
+    align-items: center;
+    color:  #212022;
+    display: grid;
+    flex-direction: column;
+    height: 40vh;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 30px;   
+}
+.detalle-nosotros{
+    padding-top: 30px;
+    text-align: center;
+    font-size: 1.4em;
+}
+
+/*--section QUIENES SOMOS --*/
+
+.quienes_somos{
+    align-items: center;
+    color:  #212022;
+    display: grid;
+    flex-direction: column;
+    height: 50vh;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 30px;   
+}
+
 
 /*--FORMULARIO--*/
 
@@ -571,26 +587,6 @@ color: #a8a8a8;
     outline:0;
     border: 1px solid #e1cc9d;
 }
-
-
-/*--section QUIENES SOMOS --*/
-
-.quienes_somos{
-    align-items: center;
-    color:  #212022;
-    display: grid;
-    flex-direction: column;
-    height: 50vh;
-    justify-content: center;
-    margin-top: 10px;
-    padding: 30px;   
-}
-
-
-
-
-
-
 
 
 
