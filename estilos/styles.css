@@ -6,33 +6,20 @@
     margin: 0%;
 }
 
-/*-------------------------------
-            BODY
--------------------------------*/
+/*-----------------------------------------------------------------------------------------------
+------------------------------------------BODY---------------------------------------------------
+-------------------------------------------------------------------------------------------------*/
 
 body{
     background-color: white;
 }
 
-/*-------------------------------
-            HEADER
--------------------------------*/
-
-/*header{
-    align-items: center;
-    background-color: white;
-    display: grid;
-    grid-template-columns: auto;
-    height: 15vh;
-    padding: 5px;
-    width: 100vw;
-}*/
+/*----------------------------------------HEADER------------------------------------------------*/
 
 .copy_header{
     align-items: center;
-    background-color: white; /*rgb(235, 225, 225)*/
-    display: grid;
-    grid-template-columns: auto auto;
+    background-color: white; 
+    display: flex;
     height: 20vh;
     padding: 5px;
     width: 100vw;
@@ -41,18 +28,19 @@ body{
     z-index: 40;
 }
 
-/*--barra de navegacion MENU --*/
+/*--------MENU --------*/
 
 .barra_menu{
     align-items: center;
-    display: grid;
-    height: 50%;
+    display: flex;
+    height: 50vh;
     justify-content: flex-end;
-    width: 100%;
+    width: 100vw;
 }
 
 .barra_menu ul{
     display: flex;
+    visibility: visible;
     z-index: 60;
 }
 
@@ -74,25 +62,22 @@ body{
 }
 
 .checkbtn{
-    color:  #212022;
-    float: right;
+    color:  #6b5b49;
+    display: none;
     line-height: 80px;
     margin-right: 20px;
     cursor: pointer;
-    display: none;
-}
-
-#check{
-    display: none;
 }
 
 section{
     height: calc(100vh - 80px);
 }
+/*-----------------------------------------------FIN HEADER---------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------*/
 
-/*-------------------------------
-            MAIN
--------------------------------*/
+
+/*------------------------------------------------HOJA ESTILO INDEX-------------------------------------------*/
+/*--------------------------------------------------MAIN------------------------------------------------------*/
 
 .imgppal{
     height: 90vh;
@@ -109,53 +94,122 @@ section{
 }
 
 #titulo{
+    color: rgb(122, 109, 95);
     font-size: 2em;
     text-align: center;
     top: 20px;
 }
 
-#titulo2{
-    font-size: 2em;
-    text-align: center;
-    top: 20px;
-}
+#titulo a:link {color: rgb(122, 109, 95);text-decoration: none;}
+#titulo a:hover {color: rgb(122, 109, 95)}
+#titulo a:visited {color: rgb(122, 109, 95)}
+#titulo a:active {background-color: whitesmoke; color: rgb(122, 109, 95)}
 
-#titulo2 a:link {color: #212022;}
-#titulo2 a:hover {background-color: #73919e;}
-#titulo2 a:visited {color: #212022;}
-#titulo2 a:active {color: #212022;}
+/*------------------NOSOTROS---------------------------*/
 
-/*-- section ESTUDIOS--*/
-
-.estudios{
+#nosotros{
     align-items: center;
+    color:  #212022;
     display: grid;
     flex-direction: column;
+    height: 40vh;
+    justify-content: center;
     margin-top: 10px;
+    padding: 30px;   
+}
+.detalle-nosotros{
+    padding-top: 30px;
+    text-align: center;
+    font-size: 1.4em;
+}
+
+/*------------------SERVICIOS---------------------------*/
+
+#servicios{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 80vh;
+}
+
+.contenedor_servicios{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+#lado{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    justify-content: space-evenly;
+    margin: 20px;
+    width: 90%;
+}
+
+.detalle{
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: -2rem 0 3rem #000;
+    color: #212022;
+    flex-direction: column;
+    height: 25%;
+    padding: 10px;
+    width: 90%;
+    min-width: min-content;
+}
+
+.descripcion{
+    font-size: 1em;
+    overflow: auto;
+}
+
+.detalle:hover{
+    transition-property: all;
+    transition: width 2s, height 2s, transform 2s;
+    background-color: rgb(122, 109, 95);
+    box-shadow: -2rem 0 3rem rgb(155, 151, 151);
+}
+
+#servicios_responsive{
+    display: none;
+}
+
+/*----------------------ESTUDIOS------------------------------*/
+
+#estudios{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
     padding: 30px; 
-    height: 650px;
+    height: 90vh;
     width: 100vw;
 }
 
 .contenedor_estudios{
     display: flex;
-    position: relative;
-    height: 500px;
-    width: 90%;
-    top: 5px;
+    height: 100vh;
+    width: 80%;
+    top: 30px;
     left: 50px;
+    padding-top: 20px;
 }
 
 .card {
     display: flex;
     height: 480px;
-    width: 60%;
     background-color: #212022;
     border-radius: 10px;
     box-shadow: -1rem 0 3rem #000;
     transition: 0.4s ease-out;
     position:relative;
     left: 0px;
+    width: 100%;
 }
 
 .card:not(:first-child) {
@@ -164,13 +218,14 @@ section{
 
 .card:hover {
     transform: translateY(-20px);
-    transition: 0.4s ease-out;
+    transition: 0.4s ease-out; /*transiciones aplicadas a las cards*/
 }
+
 
 .card:hover ~ .card {
     position: relative;
     left: 50px;
-    transition: 0.4s ease-out;
+    transition: 0.4s ease-out;/*transiciones aplicadas a las cards*/
 }
 
 .title {
@@ -181,7 +236,7 @@ section{
     top: 15px;
 }
 
-.bar {
+.barra {
     position: absolute;
     top: 100px;
     left: 20px;
@@ -189,13 +244,13 @@ section{
     width: 150px;
 }
 
-.emptybar {
+.barra_vacia {
     background-color: #2e3033;
     width: 100%;
     height: 100%;
 }
 
-.filledbar {
+.barra_llena {
     position: absolute;
     top: 0px;
     z-index: 3;
@@ -203,36 +258,33 @@ section{
     height: 100%;
     background: rgb(0,154,217);
     background: linear-gradient(90deg, rgba(0,154,217,1) 0%, rgba(217,147,0,1) 65%, rgba(255,186,0,1) 100%);
-    transition: 0.6s ease-out;
+    transition: 0.6s ease-out; /*transiciones aplicadas a las cards*/
 }
 
-.card:hover .filledbar {
+.card:hover .barra_llena {
     width: 120px;
-    transition: 0.4s ease-out;
+    transition: 0.4s ease-out; /*transiciones aplicadas a las cards*/
 }
 
-.circle {
+.estudio {
+    display: flex;
     left: 15px;
     position: absolute;
     top: 150px;
+    min-width: 20%;
+    overflow-x: hidden;
 }
 
-.circle img{
-    width:400px;
+.estudio img{
+    width:350px;
     height:250px;
 }
 
-.stroke {
-    stroke: white;
-    stroke-dasharray: 360;
-    stroke-dashoffset: 360;
-    transition: 0.6s ease-out;
+.botones_estudios_responsive{
+    display: none;
 }
 
-.card:hover .stroke {
-    stroke-dashoffset: 100;
-    transition: 0.6s ease-out;
-}
+/*----------------------------ARTISTAS--------------------------*/
 
 /*-- section SERVICIOS--*/
 
@@ -253,6 +305,8 @@ section{
     padding: 30px; 
     grid-template-columns: auto auto;
     align-items: center;
+    color:  #212022;
+    display: flex;
     flex-direction: column;
     width: 100vw;
     height: 75vh;
@@ -297,10 +351,10 @@ section{
 .grabaciones{
     align-items: center;
     color:  #212022;
-    display: grid;
+    display: flex;
     flex-direction: column;
-    height: 95%;
-    width: 95%;
+    width: 100vw;
+    height: 70vh;
     justify-content: center;
     margin-top: 10px;
     padding: 30px;   
@@ -321,47 +375,8 @@ section{
     height: 95%;
     width: 95%;
     justify-content: center;
-    margin-top: 10px;
-    padding: 30px;   
-} 
-.media-scroller{
-    margin-left: auto;
-    margin-right: auto;
-    background-color: white;
-    display: grid;
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-top: 1em;
-    gap: 20px;
-    max-width:800px ;
-    max-height: 100vh;
-    grid-auto-flow: column;
-    grid-auto-columns: 25%;
-    overflow-x: auto;
-    overscroll-behavior-inline: contain ;
-  }
-  
-  .media_element{
-    display: grid;
-    grid-template-rows: min-content;
-    
-  }
-  .media-element > a > img {
-    
-    inline-size: 100%;
-    object-fit: cover;
-    
-    border: 4px solid rgba(0, 0, 0, 0.825);
-    
-    
-  
-    
-  }
-  .title2{
-    text-align: center;
-    color: black;
-  }
-/*--section ARTISTAS --*/
+    margin-top: 20px;  
+}
 
 .contenedor_artistas{
     justify-content: space-around;
@@ -369,151 +384,68 @@ section{
     align-items: center;
     grid-template-columns: auto;
     font-size: 1.3em;
-    margin: 30px;
-    height: 50vh;
-    width: 100%;
+    margin: 20px;
+    height: 70vh;
+    width: 80%;
     gap: 10px;
     padding: 10px;
 }
 
-.artistas{
-    align-items: center;
-    color:  #212022;
+/*-------------------------------------QUIENES SOMOS ------------------------------------------------------*/
+
+#quienes_somos{
     display: flex;
     flex-direction: column;
-    width: 100vw;
-    height: 45vh;
-    justify-content: center;
-    margin-top: 10px;
-    padding: 30px;   
-}
-
-
-
-/*--section FOOTER --*/
-
-footer{
-    display: grid;
-    text-align: center;
-    background-color: #212022;
-    grid-template-columns: auto;
-    height: 20vh;
-    padding: 15px;
-    width: 100vw;
-}
-
-.foo{
-    margin-left: -15px;
-    text-align: center;
-    font-size: 1.3em;
-    background-color: #212022;
-    color:rgb(228, 95, 95);
-    height: 2vh;
-    padding: 15px;
-    width: 100vw;
-}
-
-.foo::before{
-    content: "All rights reserved to  ";
-    color:rgb(155, 151, 151)
-}
-
-.foo::after{
-    content: "  © 2022";
-    color:rgb(155, 151, 151)
-}
-
-.logos{
-    display: grid;
-    text-align-last: center;
-    align-content: center;
-    font-size: 1.5em;
-    padding-right: 5px;
-    color:  rgb(155, 151, 151);
-}
-.logos a:link {color: rgb(155, 151, 151);}
-.logos a:hover {background-color: #525758;}
-.logos a:visited {color: rgb(155, 151, 151);}
-.logos a:active {background-color: whitesmoke; color: rgb(155, 151, 151);}
-
-/*-------------------------------
-            ESTUDIOS
--------------------------------*/
-/*--section ESTUDIOS --*/
-
-.nos_estudios{
     align-items: center;
-    margin-top: 10px;
-    padding: 40px; 
-    height: 245vW;
-    width: 100%;
+    height: 400%;
+    padding-bottom: 30px;
 }
-.detalle_nos_estudios{
+
+.equipo{
+    align-items: center;
+    display: flex;
+    height: 300%;
+    justify-content: space-around;
+    padding: 30px;
     padding-top: 10px;
-    text-align: left;
-    text-align: justify;
-    font-size: 1.3em;
-}
-.detalle_estudio{
-    display: grid;
-    height: 82vw; /*1100px*/
-    width: 100%;
-    padding: 10px;  
-}
-.imgest{
-    height: 100vh;
-    margin: 3px;
-    max-width: 100%;
     width: 100%;
 }
-.imgest img{
+
+.miembro {
+    border-radius: 6px;
+    box-shadow: -1rem 0 4rem #6b5b49;;
+    height: 200px;
     text-align: center;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    width: 30%;
+}
+
+.circulo img {
+    width: 100px;
     height: auto;
-    width: 100%;
+    box-shadow: -1rem 0 4rem #6b5b49;
+    overflow: hidden;
+    border-radius: 100%;
+    margin: -60px auto 0;
 }
 
-/*-------------------------------
-            NOSOTROS
--------------------------------*/
-/*--section NOSOTROS --*/
-
-.nosotros{
-    align-items: center;
-    color:  #212022;
-    display: grid;
-    flex-direction: column;
-    height: 40vh;
-    justify-content: center;
-    margin-top: 10px;
-    padding: 30px;   
-}
-.detalle-nosotros{
-    padding-top: 30px;
-    text-align: center;
-    font-size: 1.4em;
+.nombre {
+    padding: 20px;
 }
 
-/*--section QUIENES SOMOS --*/
-
-.quienes_somos{
-    align-items: center;
-    color:  #212022;
-    display: grid;
-    flex-direction: column;
-    height: 50vh;
-    justify-content: center;
-    margin-top: 10px;
-    padding: 30px;   
+.sobreMi{
+    padding-bottom: 20px; 
 }
 
 
-/*--FORMULARIO--*/
+/*-----------------------------------------CONTACTO---------------------------------------------------------*/
 
 #contacto{
     align-items: center;
     display: flex;
     flex-direction: column;
-    height: auto;
+    height: 60%;
     justify-content: center;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -574,22 +506,22 @@ label{
     float: center;  
 }
 
-button{
+#enviar{
     height: 45px; 
     padding-left: 5px;
     padding-right: 5px;   
     margin-bottom: 20px; 
-    margin-top: 10px;   
+    margin-top: 20px;   
     text-transform: uppercase;
-    background-color: #0b0a0b; 
-    border-color: #070707; 
+    background-color: #6b5b49; 
     border-style: solid; 
     border-radius: 10px;  
+    box-shadow: -1rem 0 4rem #6b5b49;
     width: 100px;   
     cursor: pointer;
 }
 
-button p{
+#enviar p{
     color: #fff; 
 }
 
@@ -602,7 +534,7 @@ span{
     color: #0e0e0e;  
 }
 
-h2{
+h3{
     text-align: letf; 
     padding-bottom: 20px; 
     color: #010101;
@@ -637,130 +569,458 @@ color: #a8a8a8;
 }
 
 
+/*--------------------------------------------------FOOTER ------------------------------------------------------*/
 
-/*DISENO RESPONSIVO*/
+footer{
+    display: grid;
+    text-align: center;
+    background-color: #212022;
+    grid-template-columns: auto;
+    height: 20vh;
+    padding: 15px;
+    width: 100vw;
+}
 
-@media (max-width: 750px){
-    .imgppal{
-        height: 50vh;
+.foo{
+    margin-left: -15px;
+    text-align: center;
+    font-size: 1.3em;
+    background-color: #212022;
+    color:rgb(228, 95, 95);
+    height: 2vh;
+    padding: 15px;
+    width: 100vw;
+}
+
+.foo::before{
+    content: "All rights reserved to  ";
+    color:rgb(155, 151, 151)
+}
+
+.foo::after{
+    content: "  © 2022";
+    color:rgb(155, 151, 151)
+}
+
+.logos{
+    display: grid;
+    text-align-last: center;
+    align-content: center;
+    font-size: 1.5em;
+    padding-right: 5px;
+    color: rgb(155, 151, 151);
+}
+.logos a:link {color: rgb(155, 151, 151);}
+.logos a:hover {background-color: #525758;}
+.logos a:visited {color: rgb(155, 151, 151);}
+.logos a:active {background-color: whitesmoke; color: rgb(155, 151, 151);}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------Estilo Pagina ESTUDIOS--------------------------------------------------*/
+
+#nos_estudios{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 120vh;
+    width: 100vw;
+}
+
+.detalle_estudio{
+    align-items: center;
+    background-color: #6b5b49;
+    border-radius: 10px;
+    display: flex;
+    height: 40vh; 
+    margin: 10px;
+    justify-content: space-around;
+    width: 70vw;
+    padding: 10px;  
+}
+
+.imgest{
+    border-radius: 10px;
+    height: 20vh;
+    margin: 3px;
+    width: 30vw;
+}
+
+.imgest img{
+    border-radius: 10px;
+    height: 200px;
+    width: 300px;
+}
+
+.dato{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 20vh;
+    padding: 20px;
+    width: 70vw;
+}
+
+.dato h2{
+    font-size: 1.5em;
+    color: whitesmoke;
+}
+
+.dato p{
+    font-size: 1em;
+    color: whitesmoke;
+}
+
+/*--------------------------------------------------------------- Estilos Pagina PORTFOLIO---------------------------------------------------------------*/
+
+/*----------------------GRABACIONES-------------------*/
+
+#nuestros_trabajos{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 120vh;
+    width: 100vw;
+}
+
+.carrusel{
+    align-items: center;
+    color:  #212022;
+    display: grid;
+    flex-direction: column;
+    height: 95%;
+    width: 95%;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 30px;   
+} 
+.media-scroller{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    display: grid;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;
+    gap: 20px;
+    max-width:800px ;
+    max-height: 100vh;
+    grid-auto-flow: column;
+    grid-auto-columns: 25%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain ;
+}
+
+.media_element{
+    display: grid;
+    grid-template-rows: min-content;
+    
+}
+.media-element > a > img {
+    inline-size: 100%;
+    object-fit: cover; 
+}
+
+.title2{
+    text-align: center;
+    color: black;
+}
+
+
+.grabaciones{
+    align-items: center;
+    display: flex;
+    height: 500px;  
+    justify-content: space-around;
+    padding-top: 30px;
+}
+
+.discos {
+    align-items: center;
+    background-color: rgb(230, 228, 228);
+    border-radius: 20px;
+    box-shadow: 3px 4px 3px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    padding: 20px;
+    padding-top: 30px;
+    width: 20%;
+}
+
+.discos img {
+    height: 150px;
+    margin-top: 20px;
+    width: 150px;
+}
+.nombreDiscos {
+    margin-top: 20px;
+}
+.nombreArtista {
+    margin-top: 10px; 
+}
+.info{
+    margin-top: 20px;
+    overflow: scroll;
+}
+
+
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------DISENO RESPONSIVO---------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* PRIMER BREAK-POINT*/
+
+@media (max-width:1200px){
+
+/* -------------INDEX--------------*/
+/*---------------------------------*/
+    .contenedor_estudios{
+        display: none;
     }
 
-    .checkbtn{
-        display: grid;
+    #estudios{
+        height: 40vh;
+        width: 100%;
+    }
+    
+    .botones_estudios_responsive{
+        align-items: center;
+        display:flex;
+        padding: 50px;
+        width: 100%;
+    }
+
+    #estudio_boton{
+        align-items: center;
+        display:flex;
+        flex-direction: column;
+        border: #000;
+        width: 100%;
+    }
+
+    #estudio_boton img{
+        border-radius: 10px;
+        box-shadow: -1rem 0 4rem #6b5b49;
+        width: 180px;
+        height: 130px;
+    }
+
+    #artistas{
+        height: 70vh;
+}
+}
+
+/* SEGUNDO BREAK-POINT*/
+
+@media (max-width: 1000px){
+
+/* -------------INDEX--------------*/
+/*---------------------------------*/
+
+    .barra_menu{
+        width: 80%;
+    }
+
+    .barra_menu ul li{
+        font-size: 1em;
+    }
+
+    #titulo{
+        font-size: 1.5em;
+    }
+    .imgppal{
+        height: auto;
+    }
+
+    .contenedor_contacto{
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .mapa iframe{
+        width: 100%;
+        
+    }
+    .formulario{
+        padding: 30px;
+        width: 100%;
+    }
+
+    .formulario_contacto{
+        align-items: center;
+        width: 50%;
+    }
+
+    #nos_estudios{
+        height: 100vh;
+    }
+
+    .detalle_estudio{
+        align-items: center;
+        flex-direction: column;
+        height: 80vh;
+    }
+
+    /*----------ESTUDIOS ------*/
+    /*-------------------------*/
+
+    .detalle_estudio{
+        height: 140vh;
+    }
+
+    .dato{
+        padding-top: 20px;
+    }
+
+    .dato h2{
+        font-size: 1em;
+    }
+
+    .dato p{
+        font-size: 0.8em;
+    }
+
+/*--------------PORTFOLIO---------*/
+/*--------------------------------*/
+
+    #nuestros_trabajos{
+        height: 100%;
+    }
+
+    .grabaciones{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+    }
+
+    .discos {
+        height: 30%;
+        padding-top: 30px;
+        margin: 20px;
+        width: 70%;
+    }
+    .discos p{
+        overflow: scroll;
+        }
+    
+    .media-scroller{
+        width: 100%;
+    }
+}
+
+/* TERCER BREAKPOINT*/
+
+@media (max-width: 750px){
+
+/* -------------INDEX--------------*/
+/*---------------------------------*/
+    #titulo{
+        font-size: 1em;
+    }
+
+    .imgppal{
+        height: auto;
     }
 
     .barra_menu ul{
-        position: fixed;
-        display: grid;
-        width: 100vw;
-        height: 50vh;
-        top: 80px;
-        right: 100%;
-        text-align: end;
-        transition: all .5s;
-        padding-right: 500px;
-    }
-    .barra_menu ul li{
-        display:grid;
-        margin: -2px 0;
-    }
-    .barra_menu ul li a{
-        color:  #edeaf1;
-        background-color: rgb(122, 109, 95);
+        visibility: hidden;
     }
 
-    .barra_menu ul li a:hover{
-        color:  #dde0e7;
-        background-color: rgb(131, 125, 120);
+    .checkbtn{
+        box-shadow: -1rem 0 4rem #6b5b49;
+        color:  #6b5b49;
+        display: flex;
+        float: right;
+        line-height: 80px;
+        margin-right: 20px;
+        cursor: pointer;
     }
 
-    #check:checked ~ ul{
-        left:0;
+    #quienes_somos{
+        height: 80vh;
+        align-items: center;
+        display: flex;
     }
 
-    /*-- section SERVICIOS--*/
-    .servicios{
-        margin-top: -1vw; /*10px*/
-        height: 120vh;
+    .equipo{
+        align-items: center;
+        flex-direction: column;
+        height: 80vh;
+    }
+
+    .miembro{
+        align-items: center;
+        background-color: whitesmoke;
+        display: flex;
+        margin-top:20px;
+        padding: 10px;
+        width: 80vw;
+    }
+
+    .circulo img {
+        width: 100px;
+        height: 100px;
+        box-shadow: -1rem 0 4rem #6b5b49;
+        overflow: hidden;
+        border-radius: 100%;
+        margin: 5px auto 0;
+        left: 30px;
+    }
+
+    .nombre {
+        padding: 30px;
+        color: #6b5b49;
+    }
+    
+    .sobreMi{
+        color: #6b5b49;
+        padding-bottom: 10px; 
     }
     
     .contenedor_servicios{
-        grid-template-columns: auto;
-        height: 100vh;
+        display: none;
     }
 
-    .detalle:hover{
-        font-size: 1em;
-    }
-
-    /*-- section ESTUDIOS--*/
-    .estudios{
-        display: flex;
-    }
-    .contenedor_estudios{
-        left: 20px;
-        top: 50px;
-    }
-    .circle{
-        left: 15px;
-        position: absolute;
-        top: 200px;
-    }
-    .circle img{
-        width:180px;
-        height:200px;
-    }
-
-    /*-- section CONTACTANOS--*/
-    .contactanos{
-        height: 110vh; 
-    }
-    .detalle_contact{
-        grid-template-columns: auto;
-        height: 100vh;
-    }
-
-    /*-- section NOSOTROS--*/
-    .detalle-nosotros{
-        font-size: 1.2em;
-    }
-
-    .nos_estudios{
-        align-items: center;
-        flex-direction: column;
-        margin-top: 10px;
-        padding: 40px; 
-        height: 300vW;
-        width: 100%;
-    }
-    .detalle_nos_estudios{
-        padding-top: 10px;
-        text-align: left;
-        text-align: justify;
-        font-size: 1em;
-    }
-    .detalle_estudio{
-        display: grid;
-        height: 650px;
-        width: 100%;
-        margin-top: 10px;
-        padding: 10px;  
-    }
-    .imgest{
+    #servicios{
         height: 50vh;
-        margin: 3px;
-        max-width: 100%;
-        width: 100%;
-    }
-    .imgest img{
-        text-align: center;
-        height: auto;
-        width: 100%;
     }
 
-    /*-- section GRABACIONES--*/
-    .grabaciones{
-        height: 90vh;  
+    #servicios_responsive{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 40vh;
+        justify-content: space-around;
+        width: 100vw;
     }
+    
+    .botones{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 20vh;
+        width: 70%;
+    }
+    
+    #servicio{
+        background-color: whitesmoke;
+        border-radius: 100%;
+        box-shadow: -1rem 0 4rem #6b5b49;
+        height: 80px;
+        width: 80px;
+    }
+
+    #servicio i{
+        font-size: 2em;
+    }
+
+ 
 }
 
