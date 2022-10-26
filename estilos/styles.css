@@ -83,7 +83,7 @@ section{
 
 .imgppal{
     height: 47vmax;
-    margin-top: 130px;
+    margin-top: 160px;
     max-width: 100%;
     width: 100%;
 }
@@ -540,9 +540,9 @@ footer{
 
 .nos_estudios{
     align-items: center;
-    margin-top: 50px;
+    margin-top: 150px;
     padding: 10px; 
-    height: 65vw;
+    height: 135vh;
     width: 100%;
 }
 .detalle_nos_estudios{
@@ -754,6 +754,14 @@ footer{
     #artistas{
         height: 70vh;
 }
+
+/*----------ESTUDIOS ------*/
+/*-------------------------*/
+.nos_estudios{
+    margin-top: 140px;
+    height: 130vh;
+}
+
 }
 
 /* SEGUNDO BREAK-POINT*/
@@ -798,30 +806,34 @@ footer{
         width: 50%;
     }
 
-    /*----------ESTUDIOS ------*/
-    /*-------------------------*/
-    #nos_estudios{
-        justify-content: space-around;
-        margin-top: 140px;
-        height: 160vmax;
-    }
-    .detalle_estudio{
-        height: 100vh;
-        align-items: center;
-        flex-direction: column;
-        height: 45vmax;
-    }
+/*----------ESTUDIOS ------*/
+/*-------------------------*/
 
-    .dato{
-        padding-top: 20px;
+    .nos_estudios{
+        margin-top: 170px;
+        height: 120vh;
     }
-
-    .dato h2{
+    .detalle_nos_estudios{
+        padding-top: 30px;
+        text-align: left;
+        text-align: justify;
         font-size: 1em;
     }
-
-    .dato p{
-        font-size: 0.8em;
+    .detalle_estudio{
+        display: grid;
+        grid-template-columns: auto;
+        height: 80%; /*40vw*/
+        width: 100%;
+        margin-top: 10px;
+        padding-top: 30px;
+    }
+    .imgest2{
+        padding-left: 0px;
+        padding-top: 10px;
+    }
+    .imgest2 img{
+        height: 210px;
+        width: 100%;
     }
 
 /*--------------PORTAFOLIO---------*/
@@ -829,7 +841,7 @@ footer{
 
     #nuestros_trabajos{
         height: 100%;
-        margin-top:140px;
+        margin-top:170px;
     }
 
     .grabaciones{
@@ -881,7 +893,7 @@ footer{
         grid-template-columns: auto auto auto auto auto auto;
         width: 100vw;
         height: 7vh;
-        top: 90px;
+        top: 120px;
         right: 100%;
         text-align:left;
         transition: all .5s;
@@ -945,17 +957,19 @@ footer{
         padding-bottom: 10px; 
     }
 
+    /*---------- INDEX: Nosotros ------*/
     #nosotros{
         height: 45vh; 
     }
+
+    /*---------- INDEX: Servicios ------*/
     #servicios{
         height: 55vh;
     }
-    
+
     .contenedor_servicios{
         display: none;
     }
-
     #servicios_responsive{
         margin-top: 30px;
         align-items: center;
@@ -965,7 +979,6 @@ footer{
         justify-content: space-around;
         width: 100vw;
     }
-
     .botones{
         display: flex;
         align-items: center;
@@ -973,7 +986,6 @@ footer{
         height: 20vh;
         width: 70%;
     }
-
     #servicio{
         width: 100px;
         height: 100px;
@@ -984,7 +996,6 @@ footer{
         position: relative;
         overflow: hidden;
     }
-
     #servicio i,
     #servicio h4,
     #servicio p{
@@ -992,13 +1003,11 @@ footer{
         z-index: 1;
         transition: all 300ms;
     }
-
     #servicio i{
         font-size: 30px;
         color: rgb(88, 68, 54);
         transform: translateY(10px);
     }
-    
     #servicio:hover{
         width: 200px;
         height: 100px;
@@ -1011,7 +1020,6 @@ footer{
         font-size: 20px;
         transform: translateY(0px);
     }
-
     #servicio h4{
         margin-top: 5px;
         font-size: 15px;
@@ -1019,20 +1027,17 @@ footer{
         text-decoration: none;
         color: #000;
     }
-
     #servicio:hover h4{
         color: #dde0e7;
         transform: translateY(-10px);
         opacity: 0;
     }
-
     #servicio p{
         margin-top: -20px;
         font-size: 10px;
         transform: translateY(100px);
         opacity: 0;
     }
-
     #servicio:hover p{
         transform: translateY(0px);
         opacity: 1;
@@ -1040,7 +1045,6 @@ footer{
         font-size: 12px;
         margin-top: -50px;
     }
-
     #servicio .background-hover{
         width: 150px;
         height: 100px;
@@ -1052,56 +1056,17 @@ footer{
         transition: all 500ms;
         background: linear-gradient(to bottom, rgb(184, 167, 167), rgb(44, 44, 49));
     }
-
     #servicio:hover .background-hover{
         width: 300px;
         height: 300px;
         top: -50px;
         left: -50px;
     }
-
     #quienes_somos{
         padding-top: 40px;
         height: 85vh;
     }
-
     #contacto{
         padding-top: 50px;
     }
-
-    /*----------ESTUDIOS ------*/
-    /*-------------------------*/
-    
-    .nos_estudios{
-        align-items: center;
-        flex-direction: column;
-        margin-top: 10px;
-        padding: 40px; 
-        height: 110vW;
-        width: 100%;
-    }
-    .detalle_nos_estudios{
-        padding-top: 30px;
-        text-align: left;
-        text-align: justify;
-        font-size: 1em;
-    }
-    .detalle_estudio{
-        display: grid;
-        grid-template-columns: auto;
-        height: 80%; /*40vw*/
-        width: 100%;
-        margin-top: 10px;
-        padding-top: 30px;
-    }
-    .imgest2{
-        padding-left: 0px;
-        padding-top: 10px;
-    }
-    .imgest2 img{
-        height: 210px;
-        width: 100%;
-    }
-
- 
 }
