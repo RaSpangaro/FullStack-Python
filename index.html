@@ -22,17 +22,19 @@
                 </div>
         
                 <nav class="barra_menu">
-                    <ul>
-                        <li><a href="#nosotros"><i class="fa-solid fa-house"></i></a></li>
+                    <input type="checkbox" id="check">
+                        <label for="check" class="checkbtn">
+                            <i class="fa-solid fa-bars"></i>
+                        </label>
+                    <ul> 
+                        <li><a href="#"><i class="fa-solid fa-house"></i></a></li>
+                        <li><a href="#nosotros"><i class="fa-solid fa-user-group"></i> Nosotros</a></li>
                         <li><a href="#servicios"><i class="fa-solid fa-forward"></i> Servicios</a></li>
-                        <li><a href="/estudios.html"><i class="fa-solid fa-user-group"></i> Estudios</a></li>
+                        <li><a href="/estudios.html"><i class="fa-solid fa-sliders"></i> Estudios</a></li>
                         <li><a href="/portafolio.html"><i class="fa-solid fa-swatchbook"></i></i> Portafolio</a></li>
                         <li><a href="#contacto"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
                     </ul>
                 </nav>
-                <div class="checkbtn">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
             </div>
         </header>
 
@@ -61,7 +63,7 @@
                         </div>
                         <div class="detalle">
                             <span><h4><i class="fa-solid fa-headphones-simple"></i>  Música Original</h4></span>
-                            <span>Realizamos composiciones originales para publicidades, cortometrajes,largometrajes y todo tipo de producciones audiovisuales.</span>
+                            <span class="descripcion">Realizamos composiciones originales para publicidades, cortometrajes,largometrajes y todo tipo de producciones audiovisuales.</span>
                         </div>
                         <div class="detalle">
                             <span><h4><i class="fa-regular fa-circle-play"></i>  Post-Producción</h4></span>
@@ -75,24 +77,64 @@
                         </div>
                         <div class="detalle">
                             <span><h4><i class="fa-solid fa-sliders"></i>  Mezcla</h4></span>
-                            <span>Mezclamos en nuestros estudios canciones, cortometrajes, trailers y películas.</span>
+                            <span class="descripcion">Mezclamos en nuestros estudios canciones, cortometrajes, trailers y películas.</span>
                         </div>
                         <div class="detalle">
                             <span><h4><i class="fa-solid fa-compact-disc"></i>  Producción</h4></span>
                             <span class="descripcion">Preparamos tu grabación desde el minuto cero. Armado de maquetas con arreglos del estilo que necesites, para llegar a la grabación de la mejor manera optimizando los tiempos.</span>
                         </div>
                     </section> 
-                </div>  
+                </div>
                     <div id="servicios_responsive">
                         <div class="botones">
-                            <button id="servicio" class="infoA"><i class="fa-solid fa-volume-high"></i></button>
-                            <button id="servicio"><i class="fa-solid fa-headphones-simple"></i></button>
-                            <button id="servicio"><i class="fa-regular fa-circle-play"></i></button>
+                            <button id="servicio">
+                            <span>
+                            <i class="fa-solid fa-volume-high"></i>
+                            <h4>Sala De Ensayo</h4></span>
+                            <p>Contamos con todo el equipamiento para tus ensayos. Amplificadores valvulares, sistema de monitoreo intraural, alquiler de instrumentos.</p>
+                            <div class="background-hover"></div>
+                            </button>
+
+                            <button id="servicio">
+                            <span>
+                            <i class="fa-solid fa-headphones-simple"></i>
+                            <h4>Música Original</h4></span>
+                            <p>Realizamos composiciones originales para publicidades, cortometrajes,largometrajes y todo tipo de producciones audiovisuales.</p>
+                            <div class="background-hover"></div>
+                            </button>
+
+                            <button id="servicio">
+                            <span>
+                            <i class="fa-regular fa-circle-play"></i>
+                            <h4>Post-Producción</h4></span>
+                            <p class="descrip">Realizamos música original para publicidades, cortometrajes,largometrajes, películas.</p>
+                            <div class="background-hover"></div>
+                            </button>
                         </div>
                         <div class="botones">
-                            <button id="servicio"><i class="fa-solid fa-microphone"></i></button>
-                            <button id="servicio"><i class="fa-solid fa-sliders"></i></button>
-                            <button id="servicio"><i class="fa-solid fa-compact-disc"></i></button>
+                            <button id="servicio">
+                            <span>
+                            <i class="fa-solid fa-microphone"></i>
+                            <h4>Grabación</h4></span>
+                            <p class="descrip">Nuestro Estudio cuenta Pro Tools HD, Ableton Live y Logic Pro. Podés armar la configuración que quieras: por horas, por jornada, con técnico y con músicos.</p>
+                            <div class="background-hover"></div>
+                            </button>
+                              
+                            <button id="servicio">
+                            <span>
+                            <i class="fa-solid fa-sliders"></i>
+                            <h4>Mezcla</h4></span>
+                            <p class="descrip">Mezclamos en nuestros estudios canciones, cortometrajes, trailers y películas.</p>
+                            <div class="background-hover"></div>
+                            </button>
+                                
+                            <button id="servicio">
+                            <span>
+                            <i class="fa-solid fa-compact-disc"></i>
+                            <h4>Producción</h4></span>
+                            <p class="descrip">Preparamos tu grabación desde el minuto cero. Armado de maquetas con arreglos del estilo que necesites, para llegar a la grabación de la mejor manera.</p>
+                            <div class="background-hover"></div>
+                            </button>
                         </div>
                     </div>
             </section>
@@ -148,7 +190,6 @@
                     <iframe style="border-radius:20px" src="https://open.spotify.com/embed/playlist/0ZmjfF83UYK8VJy1X5kiDl?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>    
                 </div>
                 <div class="contenedor_artistas">
-                    
                 </div>
             </section>
 
