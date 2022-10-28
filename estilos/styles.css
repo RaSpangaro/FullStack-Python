@@ -1,3 +1,4 @@
+
 *{
     box-sizing: border-box;
     font-family: 'Cormorant', serif;
@@ -688,6 +689,7 @@ footer{
     align-items: center;
     display: flex;
     flex-direction: column;
+    height: max-content;
     padding-top: 50px;
     margin-top: 120px;
     width: 100vw;
@@ -1161,7 +1163,7 @@ footer{
     #servicio:hover{
         width: 200px;
         height: 120px;
-        /*border-radius: 5%;*/
+        border-radius: 5%;
         cursor: pointer;
         box-shadow: -15px 15px 25px -15px rgb(37, 35, 35);
     }
